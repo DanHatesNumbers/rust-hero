@@ -8,7 +8,7 @@ FROM alpine:latest
 WORKDIR /app
 RUN addgroup -S app 
 RUN adduser -S app -G app
-COPY --from=0 /build/target/debug/rust-hero /app/rust-hero
+COPY --from=0 /build/target/x86_64-unknown-linux-musl/debug/rust-hero /app/rust-hero
 RUN chown app:app /app/rust-hero
 USER app
 CMD ["/app/rust-hero"]
