@@ -9,5 +9,5 @@ WORKDIR /app
 RUN addgroup -S app 
 RUN adduser -S app -G app
 USER app
-COPY --from:0 /build/target/debug/rust-hero /app/rust-hero
+COPY --from=0 /build/target/debug/rust-hero /app/rust-hero
 CMD ["/app/rust-hero"]
