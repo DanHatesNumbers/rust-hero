@@ -2,7 +2,7 @@ FROM rustlang/rust:nightly
 WORKDIR /build
 ADD src/ /build/src
 ADD Cargo.toml /build/
-CMD ["cargo", "build"]
+RUN cargo build
 
 FROM alpine:latest
 WORKDIR /app
