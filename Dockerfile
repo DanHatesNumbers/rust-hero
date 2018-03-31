@@ -1,6 +1,6 @@
 FROM rustlang/rust:nightly
 WORKDIR /build
-ADD src/ /build/
+ADD src/ /build/src
 ADD Cargo.toml /build/
 CMD ["cargo", "build"]
 
