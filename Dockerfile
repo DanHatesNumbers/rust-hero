@@ -11,4 +11,5 @@ RUN adduser -S app -G app
 COPY --from=0 /build/target/x86_64-unknown-linux-musl/debug/rust-hero /app/rust-hero
 RUN chown app:app /app/rust-hero
 USER app
+EXPOSE 8000
 CMD ["/app/rust-hero"]
