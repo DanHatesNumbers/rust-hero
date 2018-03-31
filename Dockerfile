@@ -1,4 +1,4 @@
-FROM rustlang/rust:nightly
+FROM clux/muslrust
 WORKDIR /build
 ADD src/ /build/src
 ADD Cargo.toml /build/
