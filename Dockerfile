@@ -13,4 +13,4 @@ RUN chown app:app /app/rust-hero
 USER app
 EXPOSE 8000
 ENV ROCKET_ADDRESS 0.0.0.0
-CMD ["rust-hero"]
+CMD ["/app/rust-hero"]
